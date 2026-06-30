@@ -33,7 +33,8 @@ An AI-powered PDF Question Answering system built using **LangChain**, **Google 
 ```text
 pdf-ai-assistant/
 │── chat.py                 # Chat interface
-│── index.py                # PDF indexing script
+│── index.py                # PDF indexing
+│── sample.pdf              # Sample PDF (Replace with your own PDF)
 │── docker-compose.yml      # Qdrant setup
 │── requirements.txt
 │── .gitignore
@@ -51,13 +52,13 @@ git clone https://github.com/YashasviSharma10/pdf-ai-assistant.git
 cd pdf-ai-assistant
 ```
 
-### Create Virtual Environment
+### Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### Activate Virtual Environment
+### Activate the Virtual Environment
 
 **Windows**
 
@@ -92,8 +93,21 @@ docker compose up
 Create a `.env` file inside the project directory.
 
 ```env
-GEMINI_API_KEY=YOUR_API_KEY
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 ```
+
+---
+
+## 📄 Add Your PDF
+
+1. Place your PDF inside the project folder.
+2. Rename it to:
+
+```text
+sample.pdf
+```
+
+or update the filename in `index.py`.
 
 ---
 
@@ -116,43 +130,43 @@ python chat.py
 ## 🧠 How It Works
 
 ```text
-PDF
-   │
-   ▼
-PyPDFLoader
-   │
-   ▼
-Chunking
-   │
-   ▼
-Gemini Embeddings
-   │
-   ▼
-Qdrant Vector Database
-   │
-   ▼
-Similarity Search
-   │
-   ▼
-Retrieved Context
-   │
-   ▼
-Gemini 2.5 Flash
-   │
-   ▼
-Final Answer
+                    PDF
+                     │
+                     ▼
+              PyPDFLoader
+                     │
+                     ▼
+                 Chunking
+                     │
+                     ▼
+        Gemini Embedding Model
+                     │
+                     ▼
+      Qdrant Vector Database
+                     │
+                     ▼
+          Semantic Search
+                     │
+                     ▼
+          Retrieved Context
+                     │
+                     ▼
+           Gemini 2.5 Flash
+                     │
+                     ▼
+              Final Response
 ```
 
 ---
 
 ## 📌 Future Improvements
 
-- Upload multiple PDFs
-- Streamlit Web Interface
-- Chat History
-- Source Citation
-- Conversation Memory
-- Cloud Deployment
+- 📤 Upload multiple PDF files
+- 🌐 Streamlit Web Interface
+- 💬 Chat History
+- 📚 Source Citation
+- 🧠 Conversation Memory
+- ☁️ Cloud Deployment
 
 ---
 
@@ -160,4 +174,8 @@ Final Answer
 
 **Yashasvi Sharma**
 
-GitHub: https://github.com/YashasviSharma10
+- GitHub: https://github.com/YashasviSharma10
+
+---
+
+⭐ If you found this project useful, consider giving it a star.
