@@ -10,7 +10,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 load_dotenv()
 
 # PDF File Path
-pdf_path = Path(__file__).parent / "coding_question.pdf"
+pdf_path = Path(__file__).parent / "sample.pdf"
 
 # Load PDF
 loader = PyPDFLoader(file_path=pdf_path)
